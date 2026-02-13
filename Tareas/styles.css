@@ -1,0 +1,120 @@
+body {
+  background-color: rgb(234, 225, 124);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.header {
+  background-color: white;
+  padding: 16px;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.titulo span {
+  text-decoration: underline; /* subrayado obligatorio */
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  padding: 6px 10px;
+  border: 2px dotted #333; /* borde punteado */
+}
+
+.nav a:hover {
+  color: white;              /* hover obligatorio */
+  background-color: black;
+}
+
+.main {
+  padding: 16px;
+  background-color: #f7f7f7; /* fondo de un elemento */
+  border: 3px solid #1d4ed8; /* borde sólido */
+  margin: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* sombra */
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: white;
+  padding: 14px;
+  margin: 14px auto;
+  max-width: 850px;
+  border: 3px dotted #b91c1c; /* otro borde punteado distinto */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.10);
+}
+
+.foto {
+  display: block;
+  margin: 12px auto;
+  width: 220px;
+  border: 4px solid #16a34a; /* borde sólido distinto */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+.btn {
+  padding: 10px 14px;
+  border: 2px solid black;
+  border-radius: 12px; /* botón redondeado */
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+#destacado {
+  border: 4px solid #7c3aed;
+}
+
+@media (max-width: 700px) {
+  .main {
+    background-color: #c7f9cc; /* color cuando <700 */
+  }
+}
+
+@media (max-width: 300px) {
+  .main {
+    background-color: #ffd6a5; /* otro color cuando <300 */
+  }
+}
+
+@media (max-width: 400px) {
+  .img-oculta {
+    display: none; /* desaparece imagen */
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 14px;
+  background-color: white;
+  border-top: 3px solid #000;
+}
