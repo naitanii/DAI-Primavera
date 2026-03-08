@@ -1,20 +1,17 @@
-Desarrollo de aplicaciones informáticas DAI
-Objetivos:
-    -Entender los conceptos básicos de los sitios web: protocolos de comunicación, cliente
-    servidor, estructura mínima de un sitio web, elementos de estilado,
-    “responsive” y de interacción con uso de formularios y manejo de eventos
+Natalia Fernández Méndez 
+SessionStorage 
 
-    -Crear bases de datos básicas para almacenamiento y consulta de información
+La propiedad de Session Storage y Local Storage son similares, la única diferencia es que la información almacenada en Local Storage no tiene tiempo de expiración, y en Session Storage es eliminada al finalizar la sesión de la página (cuando el navegador se mantiene abierto).
 
-El contenido de la materia es el siguiente:
-    -Introducción a las páginas web 
-    -Estrutura y diseños de las paginas web 
-    -Recursos populares de las páginas web 
-    -Control de versiones 
-    -React
-    -Bases de datos 
-    -Creación de APIS con Python
-    -Inteligencia Artificial
+//Sintaxtis para guardar información y recuperarla en JSON
+sessionStorage.setItem("key","value");
 
-Hecho por Natalia Fernandez 
-Clave 206250
+//Obtiene la información almacenada desde SessionStorage 
+ver data=sessionStorage.getItem("key");
+
+//Para acceder al objeto Storage de la sesión actual del dominio y añadir un elemento utilizando Storage Item();
+sessionStorage.setItem("myCat","Tom");
+
+En conclusión, Session Storage solo asegura que la información este disponible en la duración de la sesión del browser, y borra la información cuando la ventana se cierra o se borra, sin embargo, sobrevive el refresh de las páginas.
+
+Mientras que se usa Local Storage si se necesita que la información sobreviva más tiempo.
