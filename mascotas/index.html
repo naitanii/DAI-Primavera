@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta una mascota</title>
+</head>
+<body>
+
+    <div class="solicitudes_actuales">
+
+    </div>  
+    <script>
+        async function enviarSolicitud(event, form) {
+            event.preventDefault();
+
+            //convierte el formulario completo a JSON
+            const data = Object.fromEntries(new FormData(form));
+
+            try{
+                const response = await fetch("http://localhost:3000/solicitudes",{
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                console.log("solicitud enviada correctamente");
+            } catch (error){
+                console.error("Error:", error);
+                alert("Hubo un error al enviar la solicitud");
+            }
+            
+        }
+        async function leerDatos(){
+            fetch("" + trackId, {
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer " + tokenGuardado
+        }
+      })
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error("Error en la llamada a Spotify");
+        }
+        return response.json();
+      })
+      .then(function(data) {
+        mostrarTrack(data);
+      })
+      .catch(function(error) {
+        mostrarError("Hubo un error al llamar a la API de Spotify.");
+        console.log(error);
+      });
+        }
+    </script>
+</body>
+</html>
