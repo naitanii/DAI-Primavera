@@ -32,7 +32,7 @@
             
         }
         async function leerDatos(){
-            fetch("" + trackId, {
+            fetch("" + mascotaId, {
         method: "GET",
         headers: {
           "Authorization": "Bearer " + tokenGuardado
@@ -40,7 +40,7 @@
       })
       .then(function(response) {
         if (!response.ok) {
-          throw new Error("Error en la llamada a Spotify");
+          throw new Error("Error en la llamada a las solicitudes");
         }
         return response.json();
       })
@@ -48,7 +48,7 @@
         mostrarTrack(data);
       })
       .catch(function(error) {
-        mostrarError("Hubo un error al llamar a la API de Spotify.");
+        mostrarError("Hubo un error al llamar a la API de las mascotas.");
         console.log(error);
       });
         }
